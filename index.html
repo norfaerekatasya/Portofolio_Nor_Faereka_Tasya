@@ -4,35 +4,263 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Saya</title>
+    <title>Portofolio Nor Faereka Tasya</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff7fb;
+            color: #493743;
+            line-height: 1.8;
+        }
+
+        header {
+            background: linear-gradient(135deg, #f7bfd8, #fce4ef);
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            color: #803b60;
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: #68495a;
+        }
+
+        nav {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 15px 10px;
+            border-bottom: 2px solid #f2c5da;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #94466e;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #f7d5e5;
+            color: #71304f;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .profil {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 4px 15px #eac9d9;
+        }
+
+        .foto {
+            width: 170px;
+            height: 190px;
+            object-fit: cover;
+            border-radius: 18px;
+            border: 4px solid #f1b5d0;
+            background-color: #fce4ef;
+        }
+
+        .perkenalan h2 {
+            color: #a64d79;
+            margin-bottom: 10px;
+        }
+
+        section {
+            background-color: #ffffff;
+            margin: 25px 0;
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 5px solid #e8a0c1;
+            box-shadow: 0 3px 12px #f0dce6;
+            scroll-margin-top: 85px;
+        }
+
+        section h2 {
+            color: #a64d79;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #f5d5e4;
+        }
+
+        section p {
+            margin: 8px 0;
+        }
+
+        .item {
+            padding: 10px 0;
+            border-bottom: 1px solid #f4dce7;
+        }
+
+        .item:last-child {
+            border-bottom: none;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #f7d5e5;
+            color: #78435e;
+            padding: 20px;
+            margin-top: 35px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 25px;
+            }
+
+            nav {
+                gap: 3px;
+                padding: 10px 5px;
+            }
+
+            nav a {
+                font-size: 13px;
+                padding: 7px 9px;
+            }
+
+            .profil {
+                flex-direction: column;
+                text-align: center;
+                padding: 22px;
+            }
+
+            .foto {
+                width: 145px;
+                height: 165px;
+            }
+
+            section {
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <h1> Welcome! This is my Portofolio <h1>
-        <li><a hrefe="#TS">Tentang Saya</a> | <a hrefe="#RP">Riwayat Pendidikan</a> | <a hrefe="#PG">Pengalaman</a> <a hrefe="#PS">Prestasi</a></li>
-    </h1>
 
-    <h2 id="TS"> Tentang Saya </h2>
-    <p>HALO !! Perkenalkan aku Nor Faereka Tasya yang lebih akrab dipanggil tasya, seorang mahasiswi Teknik Informatika dengan Npm 248160005 yang memiliki ketertarikan pada kegiatan sosial, lingkungan, dan pemanfaatan teknologi untuk memberikan manfaat bagi masyarakat. Telah Mengikuti beberapa pelatihan Cyber Security dari komdigi/kominfo melalui program Digitalent Scholarship</p>
+    <header>
+        <h1>Welcome to My Portfolio!</h1>
+        <p>Nor Faereka Tasya | Mahasiswi Teknik Informatika</p>
+    </header>
 
-    <h2 id="RP">Riwayat Pendidikan </h2>
-    <p>SD: SDN 067097 MEDAN</p>
-    <p>SMP: SMP LAKSAMANA MARTADINATA</p>
-    <p>SMK: SMK LAKSAMANA MARTADINATA</p>
+    <nav>
+        <a href="#tentang">Tentang Saya</a>
+        <a href="#pendidikan">Pendidikan</a>
+        <a href="#pengalaman">Pengalaman</a>
+        <a href="#prestasi">Prestasi</a>
+    </nav>
 
-    <ul>
-        <li>Tentang Saya</li>
-        <li>Riwayat Pendidikan</li>
-        <li>Pengalaman</li>
-        <li>Prestasi</li>
-    </ul>
+    <main class="container">
 
-    <h2 id="PG">Pengalaman </h2>
-    <p>Menjadi anggota HMIF 2025–sekarang</p>
-    <p>Sebagai anggota GenBI Sumut XIII</p>
+        <div class="profil">
+            <!-- Ganti foto.jpg dengan nama file fotomu -->
+            <img src="foto.jpg" alt="Foto Nor Faereka Tasya"
+                 class="foto">
 
-    <h2 id="PS">Prestasi </h2>
-    <p>Memperoleh juara 4 besar subkategori tema LEON 2026</p>
-    </center>
+            <div class="perkenalan">
+                <h2>Halo, Selamat Datang!</h2>
+                <p>
+                    Perkenalkan, aku Nor Faereka Tasya,
+                    yang lebih akrab dipanggil Tasya.
+                    Aku adalah mahasiswi Teknik Informatika
+                    yang tertarik pada kegiatan sosial,
+                    lingkungan, dan pemanfaatan teknologi
+                    untuk memberikan manfaat bagi masyarakat.
+                </p>
+            </div>
+        </div>
 
+        <section id="tentang">
+            <h2>Tentang Saya</h2>
+            <p><strong>Nama:</strong> Nor Faereka Tasya</p>
+            <p><strong>NPM:</strong> 248160005</p>
+            <p><strong>Jurusan:</strong> Teknik Informatika</p>
+            <p>
+                Saya telah mengikuti beberapa pelatihan
+                Cyber Security dari Komdigi/Kominfo melalui
+                program Digital Talent Scholarship.
+            </p>
+        </section>
+
+        <section id="pendidikan">
+            <h2>Riwayat Pendidikan</h2>
+
+            <div class="item">
+                <strong>Sekolah Dasar</strong>
+                <p>SDN 067097 Medan</p>
+            </div>
+
+            <div class="item">
+                <strong>Sekolah Menengah Pertama</strong>
+                <p>SMP Laksamana Martadinata</p>
+            </div>
+
+            <div class="item">
+                <strong>Sekolah Menengah Kejuruan</strong>
+                <p>SMK Laksamana Martadinata</p>
+            </div>
+        </section>
+
+        <section id="pengalaman">
+            <h2>Pengalaman</h2>
+
+            <div class="item">
+                <strong>Anggota HMIF</strong>
+                <p>2025–sekarang</p>
+            </div>
+
+            <div class="item">
+                <strong>Anggota GenBI Sumut XIII</strong>
+                <p>Aktif dalam komunitas Generasi Baru Indonesia.</p>
+            </div>
+        </section>
+
+        <section id="prestasi">
+            <h2>Prestasi</h2>
+
+            <div class="item">
+                <strong>LEON 2026</strong>
+                <p>
+                    Memperoleh juara 4 besar pada subkategori
+                    tema LEON 2026.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Nor Faereka Tasya | My Portfolio</p>
+    </footer>
 </body>
 </html>
